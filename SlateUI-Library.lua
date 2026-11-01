@@ -29,7 +29,7 @@ o)end)if not s then r:Destroy()error(t,0)end local u=t::k.Window p=u local v=if 
 ::any).Heartbeat else nil if v~=nil then j.start(v,function()local w=(u::any).screenGui return not u.unloaded and(w==nil
 or w.Parent~=nil)end)end if q then task.spawn(q)q=nil end if f.secureMode then task.spawn(function()local w,x=f.
 fontManager:loadFont(i.fontAsset,Enum.FontWeight.Medium),f.fontManager:loadFont(i.fontAsset,Enum.FontWeight.SemiBold)if
-not u.unloaded and w and x and w~=f.fallbackFont and x~=f.fallbackFont then local _=nilend end)end
+not u.unloaded and w and x and w~=f.fallbackFont and x~=f.fallbackFont then local _=nil end end)end
 task.spawn(function()task.wait(0.5)r:Destroy()task.wait(0.5)if not u.unloaded then u:Show()end end)return u end return l
 end)()end,[3]=function()local b,c,d=a(3)local e return(function(...)local f={}f.__index=f f.__type='Action'local g=c.
 Parent.Parent.utility local h,i,j=d(g.variables),d(g.log),d(g.HapticEngine)function f.new(k,l)l=if typeof(l)=='table'
@@ -2864,7 +2864,7 @@ d=aj(c,al.defaultSize.Y,al.minSize.Y)local e=math.max(al.defaultSize.X+(al.width
 return UDim2.fromOffset(math.floor(math.min(e,am,c*al.maxAspectRatio)),c)end local function al(am:Profile,b:number,c:
 number):UDim2 local d,e=math.min(math.clamp(b,am.minSize.X,am.defaultSize.X),b),math.min(math.clamp(c,am.minSize.Y,am.
 defaultSize.Y),c)e=math.floor(math.min(e,d/(am.minAspectRatio::number)))d=math.floor(math.min(d,e*am.maxAspectRatio))
-return UDim2.fromOffset(d,e)end function af.fit(am:Vector2?,b:ae.Mode?):UDim2 local c=af.profile(b) if am and am.X>=1000 then c=setmetatable({defaultSize=c.defaultSize*1.45},{__index=c})endif not am or am.X<ag
+return UDim2.fromOffset(d,e)end function af.fit(am:Vector2?,b:ae.Mode?):UDim2 local c=af.profile(b) if am and am.X>=1000 then c=setmetatable({defaultSize=c.defaultSize*1.45},{__index=c}) end if not am or am.X<ag
 or am.Y<ag then return UDim2.fromOffset(c.defaultSize.X,c.defaultSize.Y)end local d,e=math.min(am.X*c.maxOccupancyX,am.X
 -c.marginFloorX),ai(c,am.Y)if c.minAspectRatio then return al(c,d,e)end return ak(c,d,e)end return af end)()end},{{1,2,{
 'Rayfield'},{{38,2,{'types'}},{31,1,{'themes'},{{35,2,{'ember'}},{36,2,{'frost'}},{33,2,{'cobalt'}},{37,2,{'rose'}},{34,
